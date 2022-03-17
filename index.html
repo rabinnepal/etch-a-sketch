@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+p<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Etch A Sketch!</title>
+    
 </head>
 <body>
-    <div id="container">
+    <div class="container">
+        <div class="title"><h1>SketchPad</h1></div>
+        <div class="mode">Mode : Coloring</div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="btn">
+                <button onclick="changeColor('white')">Eraser</button>
+                <button onclick="changeColor('black')">Black</button>
+                <button onclick="changeColor('grey')">Grey</button>
+                <button onclick="changeColor('random')">Random</button>
+                <button onclick="resetBoard()">Reset</button>
+            </div>
+            <div>
+                <input type="text" placeholder="size of Board" value="16" onchange="changeSize(this.value)">
+                <button>Set Size</button>
 
+            </div>
+        </div>
     </div>
+
 </body>
 <script src="app.js"></script>
 </html>
